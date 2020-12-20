@@ -1,0 +1,158 @@
+@import "vars";
+@import "1024";
+@import "reset";
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.6rem;
+  background-color: $white;
+  color: $black;
+}
+
+@media (min-width: 1024px) {
+  .aside {
+
+    &__menu {
+      padding: 76px 0px 0px 0px;
+      width: 333px;
+      height: 100vh;
+      border-right: 0.5px solid $linegrey;
+    }
+
+    &__menu-title {
+      padding: 31px 4.5% 7px 4.5%;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 17px;
+      color: $textgrey;
+      text-transform: uppercase;
+    }
+  }
+
+  .chatlist {
+
+    &__wrapper {
+      padding: 0px 0px 76px 0px;
+    }
+  }
+
+  .chat {
+
+    &__pin {
+      .aside__menu-title {
+        padding: 18px 4.5% 7px 4.5%;
+      }
+    }
+
+    &__footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 333px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-top: .5px solid $linegrey;
+      background-color: $white;
+    }
+
+    &__footer-item {
+      padding: 10px 0px 10px 0px;
+      margin: 0px 18px 0px 0px;
+
+      &--count {
+        position: relative;
+
+        &::after {
+          letter-spacing: 0;
+          color: $white;
+          text-align: center;
+          min-height: 20px;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 20px;
+          padding: 0 6px;
+          border-radius: 1em;
+          background-color: $red;
+          content: attr(data-number);
+          position: absolute;
+          top: 10px;
+          right: 0;
+        }
+      }
+
+      &:last-child {
+        margin: 0px 0px 0px 0px;
+      }
+    }
+  }
+
+  .chatlist__item {
+    padding: 0px 4.5%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: $black;
+    text-decoration: none;
+    transition: all .2s ease-in;
+
+    &--count {
+      position: relative;
+
+      &::after {
+        letter-spacing: 0;
+        color: $white;
+        text-align: center;
+        min-height: 20px;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        padding: 0 6px;
+        border-radius: 1em;
+        background-color: $blue;
+        content: attr(data-number);
+        position: absolute;
+        top: 0;
+        right: -40px;
+      }
+    }
+
+    &--active {
+      background-color: $blue;
+      color: $white;
+
+      .chatlist__item--lock {
+        path {
+          fill: $white;
+        }
+      }
+
+    }
+
+    &--lock {
+      display: flex;
+      margin: 0px 0px 0px auto;
+    }
+
+    &-img {
+      margin: 5px 8px 5px 0px;
+      display: block;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      object-fit: cover;
+
+    }
+  }
+
+}

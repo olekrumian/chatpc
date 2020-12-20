@@ -1,0 +1,101 @@
+@media (min-width: 1024px) {
+
+  /* header */
+  .header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    background-color: $white;
+
+    &__search {
+      width: 333px;
+      padding: 18px 0px 18px 15px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      border-right: 0.5px solid $linegrey;
+      border-bottom: 0.5px solid $linegrey;
+
+      &::after {
+        content: '';
+        background: url('../img/search.svg') center center no-repeat;
+        width: 21px;
+        height: 21px;
+        position: absolute;
+        left: 25px;
+      }
+
+      input {
+        padding: 0px 5px 0px 39px;
+        width: 205px;
+        height: 39px;
+        background-color: $inputgrey;
+        border-radius: 15px;
+        border: none;
+
+        &::placeholder {
+          font-weight: 300;
+          font-size: 1.6rem;
+          line-height: 1.9rem;
+          color: var($textgrey);
+        }
+      }
+    }
+
+    &__add {
+      margin: 0px 15px 0px 15px;
+    }
+
+    &__title {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 0.5px solid $linegrey;
+    }
+
+    &__block-one {
+      margin: 0px 0px 0px 32px;
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    &__block-one-item {
+      img {
+        margin: 0px 12px 0px 0px;
+      }
+    }
+
+    &__block-one-title {
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 24px;
+      color: $black;
+      font-size: 2rem;
+      line-height: 2.4rem;
+    }
+
+    &__block-one-suptitle {
+      font-weight: normal;
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+      color: $textgrey;
+    }
+
+    &__block-two {
+      margin: 0px 32px 0px 0px;
+    }
+
+  }
+
+  /* ./header */
+
+
+}
