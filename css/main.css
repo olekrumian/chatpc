@@ -638,8 +638,8 @@ body {
   }
   .chatlist__wrapper {
     padding: 0px 0px 0px 0px;
-    height: -webkit-calc(100% - 40px);
-    height: calc(100% - 40px);
+    height: -webkit-calc(80vh - 20px);
+    height: calc(80vh - 20px);
     overflow: scroll;
   }
   .chat__pin .aside__menu-title {
@@ -878,5 +878,14 @@ body {
   }
   .margin-bottom {
     margin: 0px 0px 50px 0px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .chatlist__wrapper {
+    padding: 0px 0px 0px 0px;
+    height: -webkit-calc(100vh - 40px);
+    height: calc(100vh - 40px);
+    overflow: scroll;
   }
 }
