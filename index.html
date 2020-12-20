@@ -32,8 +32,8 @@
       </div>
     </div>
   </header>
-  <main>
-    <aside class="aside__menu">
+  <div class="main__wrapper">
+    <div class="aside__menu">
       <div class="chatlist__wrapper">
         <div class="chat__pin">
           <h4 class="aside__menu-title">Закрепленные</h4>
@@ -99,22 +99,37 @@
           </div>
         </div>
       </div>
-      <div class="chat__footer">
-        <a href="" class="chat__footer-item chat__footer-item--count" data-number="129"><img src="img/chatsmessages.svg"
-            alt=""></a>
-        <a href="" class="chat__footer-item"><img src="img/chatsettings.svg" alt=""></a>
-      </div>
-    </aside>
-    <article class="chat__content">
+    </div>
+    <div class="chat__main">
+      <div class="chat__main-wrapper">
 
-      <div class="chat__content-footer">
+        <div class="margin-bottom"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="chat__footer">
+    <a href="" class="chat__footer-item chat__footer-item--count" data-number="153"><img src="img/chatsmessages.svg"
+        alt=""></a>
+    <a href="" class="chat__footer-item"><img src="img/chatsettings.svg" alt=""></a>
+  </div>
+  <div class="chat__content">
+    <div class="chat__content-footer">
+      <div class="btn__sendfile">
         <label for="sendfile" class="chat__content-input">
           <input id="sendfile" type="file">
         </label>
       </div>
-    </article>
-
-  </main>
+      <input class="send__message-input" type="text" placeholder="Сообщение...">
+      <button class="send__message-btn send__message-btn--active">
+        <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="39" height="39" rx="19.5" fill="#F0F0F0" />
+          <path d="M14 14.4285L19.5 8.92853M19.5 8.92853L25 14.4285M19.5 8.92853L19.5 30.1428" stroke="white"
+            stroke-width="2.0625" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
+  </div>
 </body>
 
 </html>

@@ -14,16 +14,23 @@ body {
   font-size: 1.6rem;
   background-color: $white;
   color: $black;
+  overflow: hidden;
 }
 
+
 @media (min-width: 1024px) {
+
+  .main__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .aside {
 
     &__menu {
       display: block;
       padding: 76px 0px 0px 0px;
-      width: 333px;
-      height: 100vh;
+      min-width: 333px;
       border-right: 0.5px solid $linegrey;
     }
 
@@ -40,7 +47,9 @@ body {
   .chatlist {
 
     &__wrapper {
-      padding: 0px 0px 76px 0px;
+      padding: 0px 0px 0px 0px;
+      height: calc(100% - 40px);
+      overflow: scroll;
     }
   }
 
@@ -56,11 +65,12 @@ body {
       position: fixed;
       bottom: 0;
       left: 0;
-      width: 333px;
+      min-width: 333px;
       display: flex;
       justify-content: center;
       align-items: center;
       border-top: .5px solid $linegrey;
+      border-right: .5px solid $linegrey;
       background-color: $white;
     }
 
@@ -158,16 +168,32 @@ body {
 
   .chat {
 
+    &__main {
+      position: relative;
+      width: 100%;
+
+      &-wrapper {
+        padding: 0px 4.6% 0;
+        position: absolute;
+        bottom: 15px;
+        width: 90%;
+        height: 85%;
+        overflow: scroll;
+      }
+    }
+
     &__content {
+      position: relative;
 
       &-input {
         display: block;
-        margin: 18px 0px 0px 32px;
+        margin: 0px 0px 0px 20px;
         padding: 0;
         background: url(../img/sendfile.svg) center no-repeat;
         width: 39px;
         height: 39px;
         border: none;
+        cursor: pointer;
 
         input {
           display: none;
@@ -179,13 +205,65 @@ body {
       position: fixed;
       bottom: 0;
       left: 0;
-      width: 100%;
+      width: calc(100% - 333px);
       height: 76px;
       border-top: .5px solid $linegrey;
+      border-left: .5px solid $linegrey;
       margin: 0px 0px 0px 333px;
+      background-color: $white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
 
+      .send {
+
+        &__message {
+          display: flex;
+          justify-content: start;
+          align-items: center;
+        }
+
+        &__message-input {
+          margin: 0px 8px 0px 8px;
+          padding: 10px 14px;
+          width: 100%;
+          border-radius: 15px;
+          background-color: $inputgrey;
+          border: none;
+
+          &::placeholder {
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 19px;
+            color: $textgrey;
+          }
+        }
+
+        &__message-btn {
+          margin: 0px 15px 0px 0px;
+          display: flex;
+          padding: 0;
+          width: 39px;
+          height: 39px;
+          border-radius: 50%;
+          cursor: pointer;
+          border: none;
+
+          &--active {
+            svg {
+              rect {
+                fill: $blue;
+              }
+            }
+          }
+        }
+      }
     }
+  }
+
+  .margin-bottom {
+    margin: 0px 0px 50px 0px;
   }
 
 
