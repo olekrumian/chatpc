@@ -743,4 +743,9 @@ body {
     -o-object-fit: cover;
        object-fit: cover;
   }
+  .chat__content-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
 }

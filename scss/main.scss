@@ -155,4 +155,16 @@ body {
     }
   }
 
+  .chat {
+
+    &__content {}
+
+    &__content-footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+
 }
