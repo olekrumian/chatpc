@@ -47,7 +47,20 @@
     }
 
     &__add {
+      position: relative;
       margin: 0px 15px 0px 15px;
+    }
+
+    .btn__active {
+      svg {
+        rect {
+          fill: $blue;
+        }
+
+        path {
+          stroke: $white;
+        }
+      }
     }
 
     &__title {
